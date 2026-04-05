@@ -1,26 +1,65 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* ─── Design Tokens ─────────────────────────────────────────── */
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Colors */
+  --color-background:    #F2EFE7;
+  --color-surface:       #F2EFE7;
+  --color-primary:       #000000;
+  --color-secondary:     #FFFFFF;
+  --color-text-primary:  #000000;
+  --color-text-secondary:#717171;
+  --color-border:        #000000;
+  --color-success:       #00E676;
+  --color-warning:       #FFD600;
+  --color-error:         #FF1744;
+
+  /* Typography */
+  --font-sans: "DM Sans", sans-serif;
+
+  /* Font sizes */
+  --text-xs:  12px;
+  --text-sm:  14px;
+  --text-base:16px;
+  --text-lg:  20px;
+  --text-xl:  24px;
+  --text-2xl: 32px;
+  --text-3xl: 40px;
+  --text-4xl: 48px;
+
+  /* Spacing (4px base) */
+  --spacing-1:  4px;
+  --spacing-2:  8px;
+  --spacing-3:  12px;
+  --spacing-4:  16px;
+  --spacing-6:  24px;
+  --spacing-8:  32px;
+  --spacing-12: 48px;
+  --spacing-16: 64px;
+
+  /* Border radius */
+  --radius-sm:   9999px;   /* chips, pills, avatars */
+  --radius-md:   16px;     /* buttons, containers */
+  --radius-lg:   24px;     /* modals, large containers */
+  --radius-card: 12px;     /* cards */
+  --radius-full: 9999px;
+
+  /* Shadows — Neubrutalist hard offset, no blur */
+  --shadow-neu:     2px 2px 0px #000000;
+  --shadow-neu-lg:  4px 4px 0px #000000;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ─── Base ───────────────────────────────────────────────────── */
+
+:root {
+  color-scheme: light;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
